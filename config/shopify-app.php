@@ -176,7 +176,7 @@ return [
     |
     */
 
-    'api_scopes' => env('SHOPIFY_API_SCOPES', 'read_products,write_products'),
+    'api_scopes' => env('SHOPIFY_API_SCOPES', 'read_products,read_customers,read_orders'),
 
     /*
     |--------------------------------------------------------------------------
@@ -320,16 +320,14 @@ return [
     */
 
     'webhooks' => [
-        /*
             [
-                'topic' => env('SHOPIFY_WEBHOOK_1_TOPIC', 'ORDERS_CREATE'),
-                'address' => env('SHOPIFY_WEBHOOK_1_ADDRESS', 'https://some-app.com/webhook/orders-create')
-            ], [
-                'topic' => env('SHOPIFY_WEBHOOK_2_TOPIC', 'APP_PURCHASES_ONE_TIME_UPDATE'),
-                'address' => env('SHOPIFY_WEBHOOK_2_ADDRESS', 'https://some-app.com/webhook/purchase'),
-            ]
-            ...
-        */
+                'topic' => 'app/uninstalled',
+                'address' => trim(env('WEBHOOK_URL'), '/').'/webhook/app-uninstalled?action=uninstalled'
+            ],
+            [
+                'topic' => 'orders/create',
+                'address' => trim(env('WEBHOOK_URL'), '/').'/webhook/orders-process?action=orders_create'
+            ],
     ],
 
     /*

@@ -17,6 +17,11 @@ use Illuminate\Support\Facades\Route;
 //    return view('welcome');
 //});
 
-Route::get('/', function () {
-    return view('welcome');
-})->middleware(['verify.shopify'])->name('home');
+
+Route::get('/install', function () {
+    return view('install');
+})->name('install');
+
+Route::middleware(['verify.shopify'])->group(function (){
+    Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+});
