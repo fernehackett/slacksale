@@ -22,6 +22,8 @@ Route::get('/install', function () {
     return view('install');
 })->name('install');
 
+Route::get('/slack-connect', [App\Http\Controllers\HomeController::class, 'connectSlack'])->name('connectSlack');
+
 Route::middleware(['verify.shopify'])->group(function (){
     Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 });
