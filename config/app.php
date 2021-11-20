@@ -231,5 +231,9 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
 
     ],
-
+    'jwt_key' => '123123',
+    'slack_app' => [
+        'client_id' => env('SLACK_CLIENT_ID', '770454788471.2774411759968'),
+        'client_secret' => env('SLACK_CLIENT_SECRET', 'cf5b1d4d3b97df2755a60e8c89dede0e'),
+    ],
 ];

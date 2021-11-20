@@ -322,11 +322,11 @@ return [
     'webhooks' => [
             [
                 'topic' => 'app/uninstalled',
-                'address' => trim(env('WEBHOOK_URL'), '/').'/webhook/app-uninstalled?action=uninstalled'
+                'address' => trim(env('APP_URL'), '/').'/webhook/app-uninstalled?action=uninstalled'
             ],
             [
                 'topic' => 'orders/create',
-                'address' => trim(env('WEBHOOK_URL'), '/').'/webhook/orders-process?action=orders_create'
+                'address' => trim(env('APP_URL'), '/').'/webhook/orders-process?action=orders_create'
             ],
     ],
 

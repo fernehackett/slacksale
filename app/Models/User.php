@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Firebase\JWT\JWT;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -44,4 +45,23 @@ class User extends Authenticatable implements IShopModel
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function getJWTtoken(){
+        $token = JWT::encode([
+            'id' => $this->id,
+        ], config('app.jwt_key'));
+        return $token;
+    }
+
+    public function getShopifyAppUrl() {
+        return route('home', ['shop' => $this->getDomain()->toNative()]);
+    }
+
+//    public function channels(){
+//        return $this->hasMany(UserChannel::class, 'user_id', 'id');
+//    }
+    public function channelSlack(){
+        return $this->hasOne(UserChannel::class, 'user_id', 'id')
+            ->where('user_channels.type', UserChannel::TYPE_SLACK);
+    }
 }

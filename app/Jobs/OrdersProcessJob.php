@@ -6,9 +6,10 @@ use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
 use Osiset\ShopifyApp\Objects\Values\ShopDomain;
+use Osiset\ShopifyApp\Storage\Queries\Shop;
 use stdClass;
 
-class OrderProcessJob implements ShouldQueue
+class OrdersProcessJob implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 
@@ -45,12 +46,12 @@ class OrderProcessJob implements ShouldQueue
      *
      * @return void
      */
-    public function handle()
+    public function handle(Shop $shopQuery)
     {
         // Convert domain
         $this->shopDomain = ShopDomain::fromNative($this->shopDomain);
-
-        // Do what you wish with the data
-        // Access domain name as $this->shopDomain->toNative()
+        $shop = $shopQuery->getByDomain($this->shopDomain);
+        dispatch(new SendNotiSlack($shop, $this->data));
+        return true;
     }
 }
