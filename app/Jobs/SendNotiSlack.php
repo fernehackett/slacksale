@@ -37,7 +37,7 @@ class SendNotiSlack implements ShouldQueue
         $data = json_decode($user_channel->data, true);
         $slackHelper = new SlackHelper();
         $order = $this->data_order;
-        $message = 'New order: '.$order->id.;
+        $message = 'New order: '.$order->id;
         $slackHelper->sendNoti($data['incoming_webhook']['url'], $message);
     }
 }
