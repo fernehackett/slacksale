@@ -30,4 +30,8 @@ class SlackHelper
     public function sendNoti($incoming_webhook_url, $message) {
         $response = Http::asJson()->post($incoming_webhook_url, ['text' => $message]);
     }
+
+    public static function genConnectHtml($data) {
+
+    }
 }

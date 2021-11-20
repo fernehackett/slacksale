@@ -51,7 +51,7 @@ class OrdersProcessJob implements ShouldQueue
         // Convert domain
         $this->shopDomain = ShopDomain::fromNative($this->shopDomain);
         $shop = $shopQuery->getByDomain($this->shopDomain);
-        dispatch(new SendNotiSlack($shop, $this->data));
+        dispatch(new SendNotiSlack($shop, SendNotiSlack::TYPE_NEW_ORDER, $this->data));
         return true;
     }
 }

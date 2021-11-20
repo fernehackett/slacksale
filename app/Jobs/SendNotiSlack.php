@@ -12,17 +12,21 @@ use Illuminate\Queue\SerializesModels;
 
 class SendNotiSlack implements ShouldQueue
 {
+    const TYPE_WELCOME = 'welcome';
+    const TYPE_NEW_ORDER = 'new_order';
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
     protected $shop;
+    protected $type;
     protected $data_order;
     /**
      * Create a new job instance.
      *
      * @return void
      */
-    public function __construct($shop, $data_order)
+    public function __construct($shop, $type, $data_order = [])
     {
         $this->shop = $shop;
+        $this->type = $type;
         $this->data_order = $data_order;
     }
 
@@ -36,8 +40,13 @@ class SendNotiSlack implements ShouldQueue
         $user_channel = $this->shop->channelSlack;
         $data = json_decode($user_channel->data, true);
         $slackHelper = new SlackHelper();
-        $order = $this->data_order;
-        $message = 'New order: '.$order->id;
+        if ($this->type == self::TYPE_NEW_ORDER) {
+            $order = $this->data_order;
+            $message = 'New order: '.$order->id;
+        }
+        if ($this->type == self::TYPE_WELCOME) {
+            $message = trans('Hello! now you will receive notify when have new order');
+        }
         $slackHelper->sendNoti($data['incoming_webhook']['url'], $message);
     }
 }

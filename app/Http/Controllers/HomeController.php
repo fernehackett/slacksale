@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 
 
 use App\Helpers\SlackHelper;
+use App\Jobs\SendNotiSlack;
 use App\Models\User;
 use App\Models\UserChannel;
 use Firebase\JWT\JWT;
@@ -19,6 +20,12 @@ class HomeController extends Controller
             'user' => $user
         ]);
     }
+    public function saveSeting(Request $request) {
+        $user = Auth::user();
+        return  view('welcome', [
+            'user' => $user
+        ]);
+    }
     public function connectSlack(Request $request) {
         try {
             $slackHelper = new SlackHelper();
@@ -26,6 +33,16 @@ class HomeController extends Controller
             $user = User::find($user_id);
             $url = $slackHelper->getAuthUrl($user);
             return redirect($url);
+        } catch (\Exception $exception) {
+            return abort(404);
+        }
+    }
+    public function disconnectSlack(Request $request) {
+        try {
+            $user_id = JWT::decode($request->token, config('app.jwt_key'),['HS256'])->id;
+            $user = User::find($user_id);
+            UserChannel::where('user_id', $user_id)->delete();
+            return redirect($user->getShopifyAppUrl());
         } catch (\Exception $exception) {
             return abort(404);
         }
@@ -53,6 +70,7 @@ class HomeController extends Controller
                 'data' => $AcessToken->body(),
                 'status' => UserChannel::STATUS_ACTIVE,
             ]);
+            dispatch(new SendNotiSlack($user, SendNotiSlack::TYPE_WELCOME));
             return redirect($url_shopify_app);
         } catch (\Exception $exception) {
             return abort(404);
