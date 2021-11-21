@@ -30,3 +30,6 @@ Route::middleware(['verify.shopify', 'billable'])->group(function (){
     Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
     Route::post('/', [App\Http\Controllers\HomeController::class, 'saveSeting'])->name('saveSeting');
 });
+
+Route::get('/terms', [App\Http\Controllers\HomeController::class, 'terms'])->name('terms');
+Route::get('/policy', [App\Http\Controllers\HomeController::class, 'policy'])->name('policy');
