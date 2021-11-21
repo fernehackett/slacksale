@@ -87,4 +87,9 @@ class HomeController extends Controller
     {
         return view("policy");
     }
+
+    public function contact()
+    {
+        return view("contact");
+    }
 }
