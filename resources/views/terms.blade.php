@@ -401,7 +401,7 @@
 </head>
 <body class="antialiased">
 <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
-    <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
+    <div class="max-w-6xl mx-auto sm:px-6 lg:px-8 bg-white">
         <h1 class="text-center">Terms of Service</h1>
         <div class="content">
             <p>By signing up for the {{ config("app.name") }} service ("Service") or any of the services of {{ config("app.name") }} LLC ("{{ config("app.name") }}") you are agreeing to be bound by the following terms and conditions ("Terms of Service"). Any new features or tools which are added to the current Service shall be also subject to the Terms of Service. You can review the most current version of the Terms of Service at any time here.
