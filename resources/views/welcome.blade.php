@@ -30,7 +30,7 @@
                 <div class="bg-light mt-3 p-5 rounded row">
                     <div class="col-6">
                         <label for="">{{ trans('Message format') }}</label>
-                        <textarea rows="5" class="form-control"></textarea>
+                        <textarea id="formatmessage" rows="5" class="form-control">{{ $user->format_message }}</textarea>
                         <p class="text-bold">{order_name},{line_items},{total_price},{payment_method},{link}</p>
                     </div>
                     <div class="col-6">
@@ -50,15 +50,24 @@
     <script type="text/javascript" src="{{ asset('js/jquery-3.6.0.min.js') }}"></script>
     <script>
         actions.TitleBar.create(app, { title: 'setting' });
-        {{--$(document).ready(function (){--}}
-        {{--    $('#saveSeting').click(function () {--}}
-        {{--        $.ajax({--}}
-        {{--            url: '{{ route('saveSeting') }}',--}}
-        {{--            success: function () {--}}
-        {{--                alert('ok');--}}
-        {{--            }--}}
-        {{--        });--}}
-        {{--    });--}}
-        {{--});--}}
+        $(document).ready(function (){
+            var Toast = actions.Toast;
+            $('#saveSeting').click(function () {
+                console.log($('#formatmessage').val());
+                $.ajax({
+                    type: 'post',
+                    data:  'message='+$('#formatmessage').val(),
+                    url: '/',
+                    success: function () {
+                         var toastOptions = {
+                            message: 'Message Saved',
+                            duration: 5000,
+                        };
+                        var toastNotice = Toast.create(app, toastOptions);
+                        toastNotice.dispatch(Toast.Action.SHOW);
+                    }
+                });
+            });
+        });
     </script>
 @endsection

@@ -42,7 +42,24 @@ class SendNotiSlack implements ShouldQueue
         $slackHelper = new SlackHelper();
         if ($this->type == self::TYPE_NEW_ORDER) {
             $order = $this->data_order;
-            $message = 'New order: '.$order->id;
+            if ($this->shop->format_message) {
+                $format_message = $this->shop->format_message;
+            } else {
+                $format_message = "New Order {order_name}!\n{line_items}\n{total_price}\n{payment_method}\n{link}";
+            }
+            $format_message = str_replace('{order_name}', $order->name, $format_message);
+            $line_item = '';
+            if ($order->line_items) {
+                foreach ($order->line_items as $item) {
+                    if ($item->product_exists) {
+                        $line_item .= $item->name.' '.$item->price."\n";
+                    }
+                }
+            }
+            $format_message = str_replace('{line_items}', trim($line_item), $format_message);
+            $format_message = str_replace('{total_price}', $order->total_price, $format_message);
+            $format_message = str_replace('{payment_method}', $order->processing_method, $format_message);
+            $message = str_replace('{link}', 'https://'.$this->shop->getDomain()->toNative().'/admin/orders/'.$order->id, $format_message);
         }
         if ($this->type == self::TYPE_WELCOME) {
             $message = trans('Hello! now you will receive notify when have new order');

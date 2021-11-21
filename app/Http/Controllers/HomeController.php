@@ -21,10 +21,11 @@ class HomeController extends Controller
         ]);
     }
     public function saveSeting(Request $request) {
+        $format = $request->message;
         $user = Auth::user();
-        return  view('welcome', [
-            'user' => $user
-        ]);
+        $user->format_message = trim($format);
+        $user->save();
+        return response()->json(['status' => 'ok']);
     }
     public function connectSlack(Request $request) {
         try {
