@@ -77,4 +77,14 @@ class HomeController extends Controller
             return abort(404);
         }
     }
+
+    public function terms()
+    {
+        return view("terms");
+    }
+
+    public function policy()
+    {
+        return view("policy");
+    }
 }
