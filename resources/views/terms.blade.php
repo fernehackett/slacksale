@@ -404,39 +404,176 @@
     <div class="max-w-6xl mx-auto sm:px-6 lg:px-8 bg-white">
         <h1 class="text-center">Terms of Service</h1>
         <div class="content">
-            <p>By signing up for the {{ config("app.name") }} service ("Service") or any of the services of {{ config("app.name") }} LLC ("{{ config("app.name") }}") you are agreeing to be bound by the following terms and conditions ("Terms of Service"). Any new features or tools which are added to the current Service shall be also subject to the Terms of Service. You can review the most current version of the Terms of Service at any time here.
-                {{ config("app.name") }} reserves the right to update and change the Terms of Service by posting updates and changes to the
-                {{ config("app.name") }} website. You are advised to check the Terms of Service from time to time for any updates or changes that may impact you.</p><p>You must read, agree with and accept all of the terms and conditions contained in this User Agreement and the Privacy Policy before you may become a member of
-            {{ config("app.name") }}.</p><h2>Account Terms</h2><ul><li>You must be 18 years or older to use this Service.</li><li>You must provide your full legal name, current address, a valid email address, and any other information needed in order to complete the signup process.</li><li>You are responsible for keeping your password secure.
-            {{ config("app.name") }} cannot and will not be liable for any loss or damage from your failure to maintain the security of your account and password.</li><li>You may not use the
-            {{ config("app.name") }} service for any illegal or unauthorized purpose nor may you, in the use of the Service, violate any laws in your jurisdiction (including but not limited to copyright laws) as well as the laws of the United States of America.</li><li>You are responsible for all activity and content (data, graphics, photos, links) that is uploaded under your
-            {{ config("app.name") }} account.</li><li>You must not transmit any worms or viruses or any code of a destructive nature.</li><li>A breach or violation of any of the Account Terms as determined in the sole discretion of
-            {{ config("app.name") }} will result in an immediate termination of your services.</li></ul><h2>General Conditions</h2><ul><li>We reserve the right to modify or terminate the Service for any reason, without notice at any time.</li><li>We reserve the right to refuse service to anyone for any reason at any time.</li><li>Your use of the Service is at your sole risk. The Service is provided on an "as is" and "as available" basis without any warranty or condition, express, implied or statutory.</li><li>
-            {{ config("app.name") }} does not warrant that the service will be uninterrupted, timely, secure, or error-free.</li><li>
-            {{ config("app.name") }} does not warrant that the results that may be obtained from the use of the service will be accurate or reliable.</li><li>You understand that your Content (not including credit card information), may be transferred unencrypted and involve (a) transmissions over various networks; and (b) changes to conform and adapt to technical requirements of connecting networks or devices. Credit Card information is always encrypted during transfer over networks.</li><li>We may, but have no obligation to, remove Content and Accounts containing Content that we determine in our sole discretion are unlawful, offensive, threatening, libelous, defamatory, pornographic, obscene or otherwise objectionable or violates any party’s intellectual property or these Terms of Service.</li><li>
-            {{ config("app.name") }} does not warrant that the quality of any products, services, information, or other material purchased or obtained by you through the Service will meet your expectations, or that any errors in the Service will be corrected.</li><li>You expressly understand and agree that
-            {{ config("app.name") }} shall not be liable for any direct, indirect, incidental, special, consequential or exemplary damages, including but not limited to, damages for loss of profits, goodwill, use, data or other intangible losses resulting from the use of or inability to use the service.</li><li>In no event shall
-            {{ config("app.name") }} or our suppliers be liable for lost profits or any special, incidental or consequential damages arising out of or in connection with our site, our services or this agreement (however arising including negligence).</li><li>Technical support is only provided via email.</li><li>You agree not to reproduce, duplicate, copy, sell, resell or exploit any portion of the Service, use of the Service, or access to the Service without the express written permission by
-            {{ config("app.name") }}.</li><li>Verbal or written abuse of any kind (including threats of abuse or retribution) of any
-            {{ config("app.name") }} customer, {{ config("app.name") }} employee, member, or officer will result in immediate account termination.</li><li>We do not claim any intellectual property rights over the material you provide to the
-            {{ config("app.name") }} service. All material you submit remains yours.</li><li>You agree that {{ config("app.name") }} can, at any time, review all the content submitted by you to its Service.</li><li>The failure of
-            {{ config("app.name") }} to exercise or enforce any right or provision of the Terms of Service shall not constitute a waiver of such right or provision. The Terms of Service constitutes the entire agreement between you and
-            {{ config("app.name") }} and govern your use of the Service, superseding any prior agreements between you and
-            {{ config("app.name") }} (including, but not limited to, any prior versions of the Terms of Service).</li><li>
-            {{ config("app.name") }} does not pre-screen Content and it is in their sole discretion to refuse or remove any Content that is available via the Service.</li></ul><h2>Cancellation and Termination</h2><ul><li>You may cancel your account at anytime by emailing info@highviewapps.com.</li><li>Once your account is cancelled all of your Content may be deleted from the Service.</li><li>We reserve the right to modify or terminate the
-            {{ config("app.name") }} service for any reason, without notice at any time.</li><li>Fraud: Without limiting any other remedies,
-            {{ config("app.name") }} may suspend or terminate your account if we suspect that you (by conviction, settlement, insurance or escrow investigation, or otherwise) have engaged in fraudulent activity in connection with the Site.</li></ul><h2>Modifications to the Service and Prices</h2><ul><li>Prices for using
-            {{ config("app.name") }} are subject to change upon 14 days notice from {{ config("app.name") }}. Such notice may be provided at any time by posting the changes to the
-            {{ config("app.name") }} Site or the main page of a {{ config("app.name") }} Service.</li><li>{{ config("app.name") }} reserves the right at any time to time to modify or discontinue, the Service (or any part thereof) with or without notice.</li><li>
-            {{ config("app.name") }} shall not be liable to you or to any third party for any modification, price change, suspension or discontinuance of the Service.</li></ul><h2>Indemnity</h2><p>You agree to defend, indemnify and hold harmless
-            {{ config("app.name") }} and its affiliates and their respective officers, directors, agents, consultants and employees from any claims, damages, liabilities, costs, and expenses (as incurred, including attorney's fees) arising from (a) Your use of the Service or the Site; (b) the use by any third party of the Site; and (c) Your failure to comply with these Terms.</p><h2>Limitation of Liability</h2><p>Except to the extent prohibited by applicable law, in no event shall
-            {{ config("app.name") }} or Third-Party Vendor, or their affiliates, subsidiaries, or third party licensors, be liable for any damages whatsoever (including without limitation, consequential, indirect, special, punitive, or incidental damages, or damages for loss of business profits, business interruption, loss or corruption of data, or other pecuniary loss) arising out of the use or inability to use the Service, even if
-            {{ config("app.name") }} has been advised of the possibility of such damages. Except to the extent prohibited by applicable law, in no event shall the liability of
-            {{ config("app.name") }}, its affiliates, subsidiaries, and its third party licensors, if any, for damages under these Terms or arising from use of the Service exceed the amount paid by You to
-            {{ config("app.name") }} for the Service in the six (6) months immediately preceding the claim.</p><h2>General</h2><p>These Terms represent the complete agreement concerning the Service between You and
-            {{ config("app.name") }} and supersede all prior agreements and representations related to the subject matter hereof. These Terms shall be deemed agreed in and governed by the laws of the State of New Jersey, excluding choice of law principles. All proceedings shall be conducted in English. You agree that venue for all proceedings shall be Fair Lawn, New Jersey, provided that venue shall also be proper in any court of competent jurisdiction where
-            {{ config("app.name") }} seeks (a) injunctive relief against You to enforce the Terms; and/or (b) to join You in a suit brought by a third party related to the Service or the Site. The United Nations Convention for the International Sale of Goods shall not apply. Section headings are provided for convenience only and have no substantive effect on construction. Except for Your obligation to pay
-            {{ config("app.name") }}, neither party shall be liable for any failure to perform due to causes beyond its reasonable control. Notice shall be deemed effective when received by the designated fax, email, or postal address. If any provision is held to be unenforceable, the Terms shall be construed without such provision. The failure by a party to exercise any right hereunder shall not operate as a waiver of such party's right to exercise such right or any other right in the future.</p>
+            <p>By signing up for the {{ config("app.name") }} service ("Service") or any of the services
+                of {{ config("app.name") }} LLC ("{{ config("app.name") }}") you are agreeing to be bound by the
+                following terms and conditions ("Terms of Service"). Any new features or tools which are added to the
+                current Service shall be also subject to the Terms of Service. You can review the most current version
+                of the Terms of Service at any time here.
+                {{ config("app.name") }} reserves the right to update and change the Terms of Service by posting updates
+                and changes to the
+                {{ config("app.name") }} website. You are advised to check the Terms of Service from time to time for
+                any updates or changes that may impact you.</p>
+            <p>You must read, agree with and accept all of the terms and conditions contained in this User Agreement and
+                the Privacy Policy before you may become a member of
+                {{ config("app.name") }}.</p>
+            <h2>Account Terms</h2>
+            <ul>
+                <li>You must be 18 years or older to use this Service.</li>
+                <li>You must provide your full legal name, current address, a valid email address, and any other
+                    information needed in order to complete the signup process.
+                </li>
+                <li>You are responsible for keeping your password secure.
+                    {{ config("app.name") }} cannot and will not be liable for any loss or damage from your failure to
+                    maintain the security of your account and password.
+                </li>
+                <li>You may not use the
+                    {{ config("app.name") }} service for any illegal or unauthorized purpose nor may you, in the use of
+                    the Service, violate any laws in your jurisdiction (including but not limited to copyright laws) as
+                    well as the laws of the United States of America.
+                </li>
+                <li>You are responsible for all activity and content (data, graphics, photos, links) that is uploaded
+                    under your
+                    {{ config("app.name") }} account.
+                </li>
+                <li>You must not transmit any worms or viruses or any code of a destructive nature.</li>
+                <li>A breach or violation of any of the Account Terms as determined in the sole discretion of
+                    {{ config("app.name") }} will result in an immediate termination of your services.
+                </li>
+            </ul>
+            <h2>General Conditions</h2>
+            <ul>
+                <li>We reserve the right to modify or terminate the Service for any reason, without notice at any
+                    time.
+                </li>
+                <li>We reserve the right to refuse service to anyone for any reason at any time.</li>
+                <li>Your use of the Service is at your sole risk. The Service is provided on an "as is" and "as
+                    available" basis without any warranty or condition, express, implied or statutory.
+                </li>
+                <li>
+                    {{ config("app.name") }} does not warrant that the service will be uninterrupted, timely, secure, or
+                    error-free.
+                </li>
+                <li>
+                    {{ config("app.name") }} does not warrant that the results that may be obtained from the use of the
+                    service will be accurate or reliable.
+                </li>
+                <li>You understand that your Content (not including credit card information), may be transferred
+                    unencrypted and involve (a) transmissions over various networks; and (b) changes to conform and
+                    adapt to technical requirements of connecting networks or devices. Credit Card information is always
+                    encrypted during transfer over networks.
+                </li>
+                <li>We may, but have no obligation to, remove Content and Accounts containing Content that we determine
+                    in our sole discretion are unlawful, offensive, threatening, libelous, defamatory, pornographic,
+                    obscene or otherwise objectionable or violates any party’s intellectual property or these Terms of
+                    Service.
+                </li>
+                <li>
+                    {{ config("app.name") }} does not warrant that the quality of any products, services, information,
+                    or other material purchased or obtained by you through the Service will meet your expectations, or
+                    that any errors in the Service will be corrected.
+                </li>
+                <li>You expressly understand and agree that
+                    {{ config("app.name") }} shall not be liable for any direct, indirect, incidental, special,
+                    consequential or exemplary damages, including but not limited to, damages for loss of profits,
+                    goodwill, use, data or other intangible losses resulting from the use of or inability to use the
+                    service.
+                </li>
+                <li>In no event shall
+                    {{ config("app.name") }} or our suppliers be liable for lost profits or any special, incidental or
+                    consequential damages arising out of or in connection with our site, our services or this agreement
+                    (however arising including negligence).
+                </li>
+                <li>Technical support is only provided via email.</li>
+                <li>You agree not to reproduce, duplicate, copy, sell, resell or exploit any portion of the Service, use
+                    of the Service, or access to the Service without the express written permission by
+                    {{ config("app.name") }}.
+                </li>
+                <li>Verbal or written abuse of any kind (including threats of abuse or retribution) of any
+                    {{ config("app.name") }} customer, {{ config("app.name") }} employee, member, or officer will result
+                    in immediate account termination.
+                </li>
+                <li>We do not claim any intellectual property rights over the material you provide to the
+                    {{ config("app.name") }} service. All material you submit remains yours.
+                </li>
+                <li>You agree that {{ config("app.name") }} can, at any time, review all the content submitted by you to
+                    its Service.
+                </li>
+                <li>The failure of
+                    {{ config("app.name") }} to exercise or enforce any right or provision of the Terms of Service shall
+                    not constitute a waiver of such right or provision. The Terms of Service constitutes the entire
+                    agreement between you and
+                    {{ config("app.name") }} and govern your use of the Service, superseding any prior agreements
+                    between you and
+                    {{ config("app.name") }} (including, but not limited to, any prior versions of the Terms of
+                    Service).
+                </li>
+                <li>
+                    {{ config("app.name") }} does not pre-screen Content and it is in their sole discretion to refuse or
+                    remove any Content that is available via the Service.
+                </li>
+            </ul>
+            <h2>Cancellation and Termination</h2>
+            <ul>
+                <li>You may cancel your account at anytime by emailing info@highviewapps.com.</li>
+                <li>Once your account is cancelled all of your Content may be deleted from the Service.</li>
+                <li>We reserve the right to modify or terminate the
+                    {{ config("app.name") }} service for any reason, without notice at any time.
+                </li>
+                <li>Fraud: Without limiting any other remedies,
+                    {{ config("app.name") }} may suspend or terminate your account if we suspect that you (by
+                    conviction, settlement, insurance or escrow investigation, or otherwise) have engaged in fraudulent
+                    activity in connection with the Site.
+                </li>
+            </ul>
+            <h2>Modifications to the Service and Prices</h2>
+            <ul>
+                <li>Prices for using
+                    {{ config("app.name") }} are subject to change upon 14 days notice from {{ config("app.name") }}.
+                    Such notice may be provided at any time by posting the changes to the
+                    {{ config("app.name") }} Site or the main page of a {{ config("app.name") }} Service.
+                </li>
+                <li>{{ config("app.name") }} reserves the right at any time to time to modify or discontinue, the
+                    Service (or any part thereof) with or without notice.
+                </li>
+                <li>
+                    {{ config("app.name") }} shall not be liable to you or to any third party for any modification,
+                    price change, suspension or discontinuance of the Service.
+                </li>
+            </ul>
+            <h2>Indemnity</h2>
+            <p>You agree to defend, indemnify and hold harmless
+                {{ config("app.name") }} and its affiliates and their respective officers, directors, agents,
+                consultants and employees from any claims, damages, liabilities, costs, and expenses (as incurred,
+                including attorney's fees) arising from (a) Your use of the Service or the Site; (b) the use by any
+                third party of the Site; and (c) Your failure to comply with these Terms.</p>
+            <h2>Limitation of Liability</h2>
+            <p>Except to the extent prohibited by applicable law, in no event shall
+                {{ config("app.name") }} or Third-Party Vendor, or their affiliates, subsidiaries, or third party
+                licensors, be liable for any damages whatsoever (including without limitation, consequential, indirect,
+                special, punitive, or incidental damages, or damages for loss of business profits, business
+                interruption, loss or corruption of data, or other pecuniary loss) arising out of the use or inability
+                to use the Service, even if
+                {{ config("app.name") }} has been advised of the possibility of such damages. Except to the extent
+                prohibited by applicable law, in no event shall the liability of
+                {{ config("app.name") }}, its affiliates, subsidiaries, and its third party licensors, if any, for
+                damages under these Terms or arising from use of the Service exceed the amount paid by You to
+                {{ config("app.name") }} for the Service in the six (6) months immediately preceding the claim.</p>
+            <h2>General</h2>
+            <p>These Terms represent the complete agreement concerning the Service between You and
+                {{ config("app.name") }} and supersede all prior agreements and representations related to the subject
+                matter hereof. These Terms shall be deemed agreed in and governed by the laws of the State of New
+                Jersey, excluding choice of law principles. All proceedings shall be conducted in English. You agree
+                that venue for all proceedings shall be Fair Lawn, New Jersey, provided that venue shall also be proper
+                in any court of competent jurisdiction where
+                {{ config("app.name") }} seeks (a) injunctive relief against You to enforce the Terms; and/or (b) to
+                join You in a suit brought by a third party related to the Service or the Site. The United Nations
+                Convention for the International Sale of Goods shall not apply. Section headings are provided for
+                convenience only and have no substantive effect on construction. Except for Your obligation to pay
+                {{ config("app.name") }}, neither party shall be liable for any failure to perform due to causes beyond
+                its reasonable control. Notice shall be deemed effective when received by the designated fax, email, or
+                postal address. If any provision is held to be unenforceable, the Terms shall be construed without such
+                provision. The failure by a party to exercise any right hereunder shall not operate as a waiver of such
+                party's right to exercise such right or any other right in the future.</p>
         </div>
     </div>
 </div>
