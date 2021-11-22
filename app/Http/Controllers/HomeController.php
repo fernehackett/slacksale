@@ -14,23 +14,28 @@ use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
-    public function index(Request $request) {
+    public function index(Request $request)
+    {
         $user = Auth::user();
-        return  view('welcome', [
+        return view('welcome', [
             'user' => $user
         ]);
     }
-    public function saveSeting(Request $request) {
+
+    public function saveSeting(Request $request)
+    {
         $format = $request->message;
         $user = Auth::user();
         $user->format_message = trim($format);
         $user->save();
         return response()->json(['status' => 'ok']);
     }
-    public function connectSlack(Request $request) {
+
+    public function connectSlack(Request $request)
+    {
         try {
             $slackHelper = new SlackHelper();
-            $user_id = JWT::decode($request->token, config('app.jwt_key'),['HS256'])->id;
+            $user_id = JWT::decode($request->token, config('app.jwt_key'), ['HS256'])->id;
             $user = User::find($user_id);
             $url = $slackHelper->getAuthUrl($user);
             return redirect($url);
@@ -38,9 +43,11 @@ class HomeController extends Controller
             return abort(404);
         }
     }
-    public function disconnectSlack(Request $request) {
+
+    public function disconnectSlack(Request $request)
+    {
         try {
-            $user_id = JWT::decode($request->token, config('app.jwt_key'),['HS256'])->id;
+            $user_id = JWT::decode($request->token, config('app.jwt_key'), ['HS256'])->id;
             $user = User::find($user_id);
             UserChannel::where('user_id', $user_id)->delete();
             return redirect($user->getShopifyAppUrl());
@@ -48,10 +55,12 @@ class HomeController extends Controller
             return abort(404);
         }
     }
-    public function callbackSlack(Request $request) {
+
+    public function callbackSlack(Request $request)
+    {
         try {
             $slackHelper = new SlackHelper();
-            $user_id = JWT::decode($request->token, config('app.jwt_key'),['HS256'])->id;
+            $user_id = JWT::decode($request->token, config('app.jwt_key'), ['HS256'])->id;
             $user = User::find($user_id);
             if (!$user) {
                 return abort(404);
@@ -60,16 +69,16 @@ class HomeController extends Controller
             $AcessToken = $slackHelper->getAcessToken($user, $request->code);
             $data = $AcessToken->json();
             if (empty($data['access_token'])) {
-                return  redirect($url_shopify_app);
+                return redirect($url_shopify_app);
             }
             UserChannel::updateOrCreate([
                 'user_id' => $user_id,
-                'type' => UserChannel::TYPE_SLACK,
-            ],[
+                'type'    => UserChannel::TYPE_SLACK,
+            ], [
                 'user_id' => $user_id,
-                'type' => UserChannel::TYPE_SLACK,
-                'data' => $AcessToken->body(),
-                'status' => UserChannel::STATUS_ACTIVE,
+                'type'    => UserChannel::TYPE_SLACK,
+                'data'    => $AcessToken->body(),
+                'status'  => UserChannel::STATUS_ACTIVE,
             ]);
             dispatch(new SendNotiSlack($user, SendNotiSlack::TYPE_WELCOME));
             return redirect($url_shopify_app);
@@ -91,5 +100,10 @@ class HomeController extends Controller
     public function support()
     {
         return view("support");
+    }
+
+    public function webhook()
+    {
+        return response()->json(["succeed" => true]);
     }
 }
