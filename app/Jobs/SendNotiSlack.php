@@ -38,6 +38,9 @@ class SendNotiSlack implements ShouldQueue
     public function handle()
     {
         $user_channel = $this->shop->channelSlack;
+        if (empty($user_channel)) {
+            return true;
+        }
         $data = json_decode($user_channel->data, true);
         $slackHelper = new SlackHelper();
         if ($this->type == self::TYPE_NEW_ORDER) {
