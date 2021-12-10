@@ -13,7 +13,7 @@
                 <div class="bg-light p-5 rounded row">
                     <div class="col-8">
                         <h3>{{ trans('Slack Integration') }}</h3>
-                        <p>{{ trans('Send activity notifycations into Slack') }}</p>
+                        <p>{{ trans('Send activity notifications to Slack') }}</p>
                     </div>
                     <div class="col-4 pull-right">
                         @if (empty($user->channelSlack))
